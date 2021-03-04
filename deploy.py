@@ -2,7 +2,7 @@ import ray
 from ray import serve
 
 ray.init(address="auto")
-client = serve.start()
+client = serve.start(detached=True)
 
 
 class Counter:
