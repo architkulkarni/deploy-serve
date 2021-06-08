@@ -1,7 +1,7 @@
 import ray
 from ray import serve
 
-ray.init(address="auto")
+ray.init(address="auto", namespace="serve")
 client = serve.start(detached=True)
 
 
