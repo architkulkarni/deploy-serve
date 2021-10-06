@@ -3,8 +3,8 @@ import requests
 import ray
 from ray import serve
 
-serve.start()
-
+ray.init(address="auto", namespace="serve")
+serve.start(detached=True)
 
 @serve.deployment
 class Counter:
